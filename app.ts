@@ -42,7 +42,7 @@ class MongoExpressMiddleware {
         this.options.defaultFilter,
         req.query.filter
       );
-      const limit = req.query.limit ? parseInt(req.query.limit as string) : 10;
+      const limit = req.query.limit ? parseInt(req.query.limit as string) : 1000;
       const page = req.query.page > 0 ? parseInt(req.query.page as string) : 1;
       const findOptions: FindOptions = {
         limit,
